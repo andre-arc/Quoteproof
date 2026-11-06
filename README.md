@@ -27,6 +27,7 @@ Quoteproof is an agent skill that checks with code instead. After researching, i
 | Test | Result |
 | :-- | :-- |
 | Real research run (78 claims, 14 pages) | 77 verified, **1 wrong-page citation caught and corrected** |
+| HTTP/3 case study (83 claims, 35 from research PDFs) | 82 verified; an earlier run **caught 2 real misquotes** from papers |
 | Stress test with 35 planted errors + 10 controls | **45/45** classified correctly |
 | Same topic vs Claude deep research | **~28% of the research tokens**, on a cheaper model. 0 quote errors in the report vs 1 in deep research's |
 

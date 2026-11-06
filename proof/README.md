@@ -2,7 +2,9 @@
 
 Two tests, all data included. Both ran Quoteproof's quote checker exactly as it ships in the skill.
 
-A third comparison, against Claude's deep research on the same topic (cost, time, citation accuracy and coverage), is in [vs-deep-research/](vs-deep-research/README.md).
+A full case study on a second topic, with research-paper (PDF) sources and two real misquotes caught, is in [http3-quic/](http3-quic/README.md).
+
+A comparison against Claude's deep research on the same topic (cost, time, citation accuracy and coverage), is in [vs-deep-research/](vs-deep-research/README.md).
 
 ## 1. Real research run: SQLite WAL vs rollback journal
 

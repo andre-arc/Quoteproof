@@ -1,0 +1,456 @@
+[
+ {
+  "claim": "Wolsing et al. (ANRW 2019) found that in lossy networks QUIC clearly outperforms the stock TCP+TLS+HTTP/2 web stack, which the authors mainly attribute to QUIC progressing streams independently of head-of-line blocking.",
+  "source": "https://arxiv.org/pdf/1906.07415",
+  "quote": "In lossy networks, QUIC clearly outperforms the current Web stack, which we mainly attribute to its ability to progress streams independently of head-of-line blocking.",
+  "status": "verified"
+ },
+ {
+  "claim": "Wolsing et al. found that QUIC still outperforms a tuned variant of TCP, although the gap narrows once TCP is tuned.",
+  "source": "https://arxiv.org/abs/1906.07415",
+  "quote": "Nevertheless, QUIC still outperforms even our tuned variant of TCP.",
+  "status": "verified"
+ },
+ {
+  "claim": "Wolsing et al. report that tuning TCP parameters (initial window, pacing, BBR, kernel buffers) is not negligible and yields significant gains, so untuned TCP baselines overstate QUIC's advantage.",
+  "source": "https://arxiv.org/abs/1906.07415",
+  "quote": "In this paper, we can show that tuning TCP parameters is not negligible and directly yields significant improvements.",
+  "status": "verified"
+ },
+ {
+  "claim": "Wolsing et al. attribute QUIC's performance advantage mostly to its reduced RTT during connection establishment, with head-of-line-blocking avoidance mattering mainly on lossy networks.",
+  "source": "https://arxiv.org/abs/1906.07415",
+  "quote": "This performance advantage is mostly caused by QUIC's reduced RTT design during connection establishment,",
+  "status": "verified"
+ },
+ {
+  "claim": "Yu and Benson (WWW 2021), measuring production QUIC at Google, Facebook and Cloudflare, found that removing head-of-line blocking has little impact on Page Load Time and Speed Index relative to congestion control for real-world web pages. This is evidence against HOL blocking being the main lossy-network benefit.",
+  "source": "https://cs.brown.edu:443/~tab/papers/QUIC_WWW21.pdf",
+  "quote": "QUIC's removal of HOL blocking has little impact on Page Load Time and Speed Index relative to congestion control for real-world web-pages.",
+  "status": "not_found"
+ },
+ {
+  "claim": "Yu and Benson found that QUIC's overall performance is largely determined by the server's choice of congestion-control algorithm and the robustness of its implementation under edge-case network conditions, which can matter more than the protocol design.",
+  "source": "https://cs.brown.edu:443/~tab/papers/QUIC_WWW21.pdf",
+  "quote": "its overall performance is largely determined by the server's choice of congestion-control algorithm",
+  "status": "verified"
+ },
+ {
+  "claim": "Yu and Benson conclude that QUIC's performance is tied to implementation design choices, bugs and configuration, so QUIC measurements often do not generalize across deployments.",
+  "source": "https://cs.brown.edu:443/~tab/papers/QUIC_WWW21.pdf",
+  "quote": "QUIC's performance is inherently tied to implementation design choices, bugs, and configurations",
+  "status": "verified"
+ },
+ {
+  "claim": "An early (2016) KTH thesis using Chromium's QUIC toy client and traffic shaping found that packet loss affected TCP and QUIC throughput similarly, a result against a clear QUIC advantage under loss. The study predates the IETF QUIC standard and is small in scope.",
+  "source": "https://www.kth.se/social/files/573b9e20f276545953b688f3/Performance%20testing%20TCP%20and%20QUIC.pdf",
+  "quote": "Results were similar for the two transport protocols.",
+  "status": "verified"
+ },
+ {
+  "claim": "Liu et al. (arXiv 2409.16267, 2024) compare HTTP/2 and HTTP/3 with proxies under emulated loss and report that HTTP/3 performs best under high loss and high latency, leveraging connection migration and multiplexing.",
+  "source": "https://arxiv.org/abs/2409.16267",
+  "quote": "H3 excels under high-loss and high-latency conditions, leveraging connection migration and multiplexing",
+  "status": "verified"
+ },
+ {
+  "claim": "Arxiv 2309.16395 measured QUIC implementations on real hardware and found that QUIC throughput varies widely across client and server implementations, so a single QUIC-vs-TCP result does not generalize. This is a caveat rather than a loss measurement.",
+  "source": "https://arxiv.org/abs/2309.16395",
+  "quote": "Our results show that QUIC performance varies widely between client and server implementations from 90 Mbit/s to 4900 Mbit/s.",
+  "status": "verified"
+ },
+ {
+  "claim": "In a multi-stream test (20 x 1 MB files), HTTP/2 and HTTP/3 performed comparably when packet loss was below 8%; at 8% or more loss HTTP/3 significantly outperformed HTTP/2.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2409.16267",
+  "quote": "when the packet loss reaches or exceeds 8%, H3 significantly outperforms H2.",
+  "status": "verified"
+ },
+ {
+  "claim": "At 12% packet loss with no proxy, HTTP/2 averaged 113.42 s to complete the multi-stream download while HTTP/3 finished in 20.98 s.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2409.16267",
+  "quote": "at 12% packet loss without a proxy, H2 required an average of 113.42 seconds to complete the download",
+  "status": "verified"
+ },
+ {
+  "claim": "During a simulated IP address change (connection migration) under 4% loss and 50 ms delay, the HTTP/2 client averaged 56.7 s versus 6.6 s for HTTP/3 (no proxy).",
+  "source": "https://ar5iv.labs.arxiv.org/html/2409.16267",
+  "quote": "under conditions of 4% packet loss and 50ms delay, the H2 client (wget_h2_resume) took an average of 56.7 seconds",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC connection migration lets an ongoing session survive an IP change, which the paper contrasts with TCP needing a new connection after an IP change.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2409.16267",
+  "quote": "QUIC's connection migration allows an ongoing session to continue without interruption",
+  "status": "verified"
+ },
+ {
+  "claim": "The paper caveats that HTTP/2 with the right congestion control algorithm can achieve performance comparable to HTTP/3, so the protocol gap depends on CCA choice.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2409.16267",
+  "quote": "H2 with the right congestion control algorithm (CCA) can achieve performance comparable to H3.",
+  "status": "verified"
+ },
+ {
+  "claim": "In a Lighthouse-based HTTP/3 (draft 27) vs TCP+TLSv1.3 study with NetEm loss capped at 1.4%, HTTP/3 scored better at higher loss rates and its score flattened as loss rose while TCP's decayed almost linearly.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2004.01978",
+  "quote": "H3's aggregate score flattened out as more loss was introduced whereas TCP+TLSv1.3's curve decayed almost linearly.",
+  "status": "verified"
+ },
+ {
+  "claim": "The same study found results became unstable beyond 1.4% packet loss in NetEm, and those trials were excluded.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2004.01978",
+  "quote": "Beyond the setting of 1.4% packet loss in NetEm, the results became quite unstable.",
+  "status": "verified"
+ },
+ {
+  "claim": "In the same study, TCP+TLSv1.3 still scored higher than HTTP/3 at 2000 ms delay, while the gap narrowed approaching 1000 ms delay.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2004.01978",
+  "quote": "TCP+TLSv1.3 still performed better in a trial with 2000ms delay.",
+  "status": "verified"
+ },
+ {
+  "claim": "Measured on a Pixel 5 phone over 5G testbeds, QUIC (HTTP/3) performed worse than HTTP/2 for 1 GB downloads and the paper says the gap is larger on weaker mobile clients.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2310.09423",
+  "quote": "On weaker clients such as mobile devices, the gap is even larger.",
+  "status": "verified"
+ },
+ {
+  "claim": "The paper reports QUIC performs worse than HTTP/2 in Ethernet and 5G scenarios, attributing it to high bandwidth saturating client CPU rather than to packet loss.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2310.09423",
+  "quote": "QUIC performs worse than HTTP/2 in Ethernet and 5G scenarios.",
+  "status": "verified"
+ },
+ {
+  "claim": "The paper states QUIC's video bitrate degradation is hidden over 4G but appears over 5G, because QoE degradation only shows when underlying bandwidth is high.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2310.09423",
+  "quote": "For example, the impact is hidden over 4G but unleashed over 5G.",
+  "status": "verified"
+ },
+ {
+  "claim": "For 4G, the authors report the QUIC vs HTTP/2 performance difference is not that significant, with HTTP/2 slightly better overall bitrate.",
+  "source": "https://ar5iv.labs.arxiv.org/html/2310.09423",
+  "quote": "the performance difference is not that significant",
+  "status": "verified"
+ },
+ {
+  "claim": "Over real operational MONROE mobile networks in Europe, QUIC-based operations were advantageous for users that move, and performance was strongly affected by the chosen QUIC congestion control algorithm (no loss rates reported in the abstract).",
+  "source": "https://dspace.networks.imdea.org/bitstream/20.500.12761/973/1/MedNetCom2021.pdf",
+  "quote": "QUIC-based operations are advantageous for users that move, and they are also strongly affected by the congestion control algorithm chosen for QUIC.",
+  "status": "not_found"
+ },
+ {
+  "claim": "The MONROE study states QUIC reacts better than TCP to the variations of channel quality experienced by mobile nodes.",
+  "source": "https://dspace.networks.imdea.org/bitstream/20.500.12761/973/1/MedNetCom2021.pdf",
+  "quote": "QUIC reacts better to the vagaries of channel quality experienced by mobile nodes.",
+  "status": "verified"
+ },
+ {
+  "claim": "On fast networks, the UDP+QUIC+HTTP/3 stack suffers a data rate reduction of up to 45.2% versus TCP+TLS+HTTP/2 in file download tests (Zhang et al., WWW 2024).",
+  "source": "https://arxiv.org/pdf/2310.09423",
+  "quote": "the UDP+QUIC+HTTP/3 stack suffers a data rate reduction of up to 45.2% compared to the TCP+TLS+HTTP/2 counterpart",
+  "status": "verified"
+ },
+ {
+  "claim": "The authors identify the root cause of QUIC's slowdown on fast networks as high receiver-side processing overhead, including excessive data packets and QUIC's user-space ACKs.",
+  "source": "https://arxiv.org/pdf/2310.09423",
+  "quote": "we identify the root cause to be high receiver-side processing overhead, in particular, excessive data packets and QUIC's user-space ACKs",
+  "status": "verified"
+ },
+ {
+  "claim": "At higher bandwidth, QUIC consistently lags behind HTTP/2 in throughput by up to 15.7%, while the two perform similarly at lower bandwidth (below about 600 Mbps).",
+  "source": "https://arxiv.org/pdf/2310.09423",
+  "quote": "QUIC consistently lags behind HTTP/2 by up to 15.7% in terms of throughput",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC and HTTP/2 perform similarly only when bandwidth is relatively low (below about 600 Mbps), so the QUIC penalty is a high-bandwidth effect rather than a lossy-link effect in this study.",
+  "source": "https://arxiv.org/pdf/2310.09423",
+  "quote": "QUIC and HTTP/2 exhibit similar performance when the network bandwidth is relatively low (below ~600 Mbps)",
+  "status": "verified"
+ },
+ {
+  "claim": "During packet reception, QUIC incurs considerably higher CPU usage than HTTP/2 on state-of-the-art client hosts.",
+  "source": "https://arxiv.org/pdf/2310.09423",
+  "quote": "during packet reception, QUIC incurs considerably higher CPU usage than HTTP/2 on state-of-the-art client hosts",
+  "status": "verified"
+ },
+ {
+  "claim": "The QUIC throughput gap also reduces application quality: video streaming shows up to a 9.8% video bitrate reduction.",
+  "source": "https://arxiv.org/pdf/2310.09423",
+  "quote": "video streaming (up to 9.8% video bitrate reduction)",
+  "status": "verified"
+ },
+ {
+  "claim": "In a YouTube measurement over 2600 hours, the TCP setup either outperformed or matched QUIC-enabled playback in more than 60% of cases.",
+  "source": "https://arxiv.org/pdf/2203.11977",
+  "quote": "the legacy setup (TCP) either outperforms or performs the same as the QUIC-enabled browser for more than 60% of cases",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC's fallback to TCP is blind: it does not distinguish middlebox-caused failures from congestion-caused failures, which can hurt performance.",
+  "source": "https://arxiv.org/pdf/2203.11977",
+  "quote": "not distinguishing between failures caused by middleboxes and that caused by network congestion",
+  "status": "verified"
+ },
+ {
+  "claim": "Measurement studies cited by the IETF put the share of networks that block all UDP traffic at roughly 3% to 5%, so UDP blocking affects a minority of networks.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9308.txt",
+  "quote": "Measurement studies have shown between 3% [Trammell16] and 5% [Swett16] of networks block all UDP traffic",
+  "status": "verified"
+ },
+ {
+  "claim": "Falling back from QUIC to TCP loses stream multiplexing, which would then have to be implemented in the application layer.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9308.txt",
+  "quote": "TCP does not provide stream multiplexing, and therefore stream multiplexing would need to be implemented",
+  "status": "verified"
+ },
+ {
+  "claim": "The IETF applicability document reports little evidence of systematic disadvantage to UDP traffic compared to TCP, which cuts against the assumption that UDP is generally throttled.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9308.txt",
+  "quote": "there is little evidence of other forms of systematic disadvantage to UDP traffic compared to TCP",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC in NGINX (2019 era) sent one UDP packet per sendmsg() call, adding per-packet syscall and context-switch overhead that Cloudflare later reduced with GSO.",
+  "source": "https://blog.cloudflare.com/accelerating-udp-packet-transmission-for-quic/",
+  "quote": "Currently the code that implements QUIC in NGINX uses the sendmsg() system call to send a single UDP packet at a time.",
+  "status": "verified"
+ },
+ {
+  "claim": "In a Cloudflare 2020 test on their own network, HTTP/3 was slightly slower than HTTP/2 on a larger page (2.33s vs 2.30s), which the authors suspect stems from a congestion-control mismatch (BBR on HTTP/2 vs CUBIC on HTTP/3).",
+  "source": "https://blog.cloudflare.com/http-3-vs-http-2/",
+  "quote": "HTTP/3 is just slightly slower than HTTP/2 on our network today, taking 2.33s to load versus 2.30s.",
+  "status": "verified"
+ },
+ {
+  "claim": "On mobile devices, QUIC's advantage over TCP diminishes across the board and is at times not statistically significant, although QUIC outperforms TCP in most mobile cases.",
+  "source": "https://blog.apnic.net/2018/01/29/measuring-quic-vs-tcp-mobile-desktop/",
+  "quote": "Its advantages, however, diminish across the board and at times are not statistically significant.",
+  "status": "verified"
+ },
+ {
+  "claim": "In competition with TCP, QUIC can take more than its fair share of bottleneck bandwidth (always more than half in the reported experiments) because it achieves a larger congestion window.",
+  "source": "https://blog.apnic.net/2018/01/29/measuring-quic-vs-tcp-mobile-desktop/",
+  "quote": "our experiments showed that QUIC always consumes more than half of the bottleneck bandwidth",
+  "status": "verified"
+ },
+ {
+  "claim": "Meta (Facebook app video, QUIC vs TCP): mean time between rebuffering improved in aggregate by up to 22%, depending on platform.",
+  "source": "https://engineering.fb.com/2020/10/21/networking-traffic/how-facebook-is-bringing-quic-to-billions/",
+  "quote": "Mean time between rebuffering (MTBR), a measure of the time between buffering events, improved in aggregate by up to 22 percent, depending on the platform.",
+  "status": "verified"
+ },
+ {
+  "claim": "Meta (Facebook app video, QUIC vs TCP): the rate of video stalls was reduced by 20%.",
+  "source": "https://engineering.fb.com/2020/10/21/networking-traffic/how-facebook-is-bringing-quic-to-billions/",
+  "quote": "The rate of video stalls was reduced by 20 percent.",
+  "status": "verified"
+ },
+ {
+  "claim": "Meta reports QUIC's video benefit was outsized on networks with poorer conditions, especially in emerging markets.",
+  "source": "https://engineering.fb.com/2020/10/21/networking-traffic/how-facebook-is-bringing-quic-to-billions/",
+  "quote": "QUIC improved the video viewing experience, with an outsized impact on networks with relatively poorer conditions, especially those in emerging markets.",
+  "status": "verified"
+ },
+ {
+  "claim": "Meta (Facebook app dynamic GraphQL requests, HTTP/3 vs HTTP/2): 6% fewer request errors and a 20% tail latency reduction.",
+  "source": "https://engineering.fb.com/2020/10/21/networking-traffic/how-facebook-is-bringing-quic-to-billions/",
+  "quote": "People on Facebook experienced a 6 percent reduction in request errors, a 20 percent tail latency reduction",
+  "status": "verified"
+ },
+ {
+  "claim": "Uber (rider and driver apps, QUIC vs TCP over HTTPS): 10-30% reduction in tail-end latency at scale.",
+  "source": "https://www.uber.com/blog/employing-quic-protocol/",
+  "quote": "We witnessed a reduction of 10-30 percent in tail-end latencies for HTTPS traffic at scale in our rider and driver apps.",
+  "status": "fetch_failed",
+  "detail": "HTTP Error 406: Not Acceptable"
+ },
+ {
+  "claim": "Uber's TCP traces found most connections were lossy, with TCP retransmitting 3.5% of total packets.",
+  "source": "https://www.uber.com/blog/employing-quic-protocol/",
+  "quote": "most connections were lossy, causing TCP to retransmit 3.5 percent of total packets.",
+  "status": "fetch_failed",
+  "detail": "HTTP Error 406: Not Acceptable"
+ },
+ {
+  "claim": "Uber observed up to 7% of packets dropped by the network at congested sites.",
+  "source": "https://www.uber.com/blog/employing-quic-protocol/",
+  "quote": "we witnessed as high as 7 percent of packets being dropped by the network.",
+  "status": "fetch_failed",
+  "detail": "HTTP Error 406: Not Acceptable"
+ },
+ {
+  "claim": "Uber: the 75th percentile of TCP back-off was almost three seconds, far above typical RTT on its networks.",
+  "source": "https://www.uber.com/blog/employing-quic-protocol/",
+  "quote": "the 75th percentile of TCP back-off was almost three seconds.",
+  "status": "fetch_failed",
+  "detail": "HTTP Error 406: Not Acceptable"
+ },
+ {
+  "claim": "Google QUIC (as reported in Google's SIGCOMM 2017 paper, cited secondhand): search load time reduced 8% average on desktop and 3.6% on mobile.",
+  "source": "https://pulse.internetsociety.org/en/blog/measuring-http-3-real-world-performance/",
+  "quote": "reported an 8% average reduction in the time it took to load Google search results on desktop and 3.6% on mobile.",
+  "status": "verified"
+ },
+ {
+  "claim": "Google QUIC: for the slowest 1% of Google users, page load was up to 16% faster (as cited via Internet Society Pulse).",
+  "source": "https://pulse.internetsociety.org/en/blog/measuring-http-3-real-world-performance/",
+  "quote": "And for the slowest 1% of Google users, it was up to 16% faster to load.",
+  "status": "verified"
+ },
+ {
+  "claim": "Google QUIC: YouTube showed up to 20% less video stalling in economies such as India (as cited via Internet Society Pulse).",
+  "source": "https://pulse.internetsociety.org/en/blog/measuring-http-3-real-world-performance/",
+  "quote": "up to 20% less video stalling",
+  "status": "verified"
+ },
+ {
+  "claim": "Cloudflare 2020 real-browser tests on its own sites: HTTP/3 performance still trails HTTP/2 by about 1-4% on average in North America, which it attributed possibly to BBR vs CUBIC congestion control.",
+  "source": "https://blog.cloudflare.com/http-3-vs-http-2/",
+  "quote": "HTTP/3 performance still trails HTTP/2 performance, by about 1-4% on average in North America.",
+  "status": "verified"
+ },
+ {
+  "claim": "Cloudflare 2024 Speed Week (real user measurements, connection time, not page load): at P95, connection time is 116 ms faster with HTTP/3 enabled.",
+  "source": "https://blog.cloudflare.com/network-performance-update-security-week-2024/",
+  "quote": "At P95, Cloudflare is 116 ms faster for connection times when HTTP/3 is enabled.",
+  "status": "verified"
+ },
+ {
+  "claim": "Akamai live stream in Latin America (April 2023): about 69% of HTTP/3 connections reached 5 Mbps or more, versus 56% of HTTP/2 connections.",
+  "source": "https://blog.apnic.net/2023/10/09/measuring-http-3-real-world-performance/",
+  "quote": "about 69% of HTTP/3 connections reach a throughput of 5 Mbps or more,",
+  "status": "verified"
+ },
+ {
+  "claim": "Wix (connection setup, HTTP/3 vs HTTP/2): up to 33% improvement in the mean, and often more at the 75th percentile.",
+  "source": "https://blog.apnic.net/2023/10/09/measuring-http-3-real-world-performance/",
+  "quote": "up to 33% improvements in the mean and often more in the 75th percentile",
+  "status": "verified"
+ },
+ {
+  "claim": "APNIC notes most public HTTP/2 vs HTTP/3 comparisons are lab-based rather than real-world deployments.",
+  "source": "https://blog.apnic.net/2023/10/09/measuring-http-3-real-world-performance/",
+  "quote": "most (public) comparisons between HTTP/2 and HTTP/3 are based on lab testing instead of real-world deployments.",
+  "status": "verified"
+ },
+ {
+  "claim": "HTTP/2 multiplexes streams over one TCP connection, but TCP loss recovery cannot see that parallelism, so one lost or reordered packet stalls all active transactions.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9114.html",
+  "quote": "However, because the parallel nature of HTTP/2's multiplexing is not visible to TCP's loss recovery mechanisms,",
+  "status": "verified"
+ },
+ {
+  "claim": "A lost or reordered packet in HTTP/2 over TCP causes all active transactions to experience a stall.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9114.html",
+  "quote": "a lost or reordered packet causes all active transactions to experience a stall",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC incorporates stream multiplexing and per-stream flow control at the transport layer, which HTTP/3 relies on.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9114.html",
+  "quote": "The QUIC transport protocol incorporates stream multiplexing and per-stream flow control,",
+  "status": "verified"
+ },
+ {
+  "claim": "HTTP/3 provides reliability at the stream level while QUIC keeps congestion control across the whole connection.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9114.html",
+  "quote": "By providing reliability at the stream level and congestion control across the entire connection,",
+  "status": "verified"
+ },
+ {
+  "claim": "In HTTP/3, stream concurrency is managed by QUIC rather than by the HTTP layer as in HTTP/2.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9114.html",
+  "quote": "In contrast to HTTP/2, stream concurrency in HTTP/3 is managed by QUIC.",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC gives no ordering guarantee between bytes on different streams, so data ordering on one stream is independent of other streams.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9000.html",
+  "quote": "QUIC does not provide any means of ensuring ordering between bytes on different streams.",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC streams can be created by either endpoint, send data concurrently interleaved with other streams, and be canceled.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9000.html",
+  "quote": "Streams can be created by either endpoint, can concurrently send data interleaved with other streams, and can be canceled.",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC loss detection is tracked separately per packet number space, unlike RTT measurement and congestion control.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9002.html",
+  "quote": "Loss detection is separate per packet number space, unlike RTT measurement and congestion control",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC packet numbers increase strictly within a packet number space and directly encode transmission order, which removes the retransmission ambiguity TCP has.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9002.html",
+  "quote": "QUIC's packet number is strictly increasing within a packet number space and directly encodes transmission order.",
+  "status": "verified"
+ },
+ {
+  "claim": "TCP conflates transmission order at the sender with delivery order at the receiver, which RFC 9002 cites as the source of retransmission ambiguity.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9002.html",
+  "quote": "TCP conflates transmission order at the sender with delivery order at the receiver",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC supports many ACK ranges, whereas TCP's SACK option provides only three.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9002.html",
+  "quote": "QUIC supports many ACK ranges, as opposed to TCP's three SACK ranges.",
+  "status": "verified"
+ },
+ {
+  "claim": "RFC 9002 recommends a packet reordering threshold (kPacketThreshold) of 3 for declaring packets lost.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9002.html",
+  "quote": "The RECOMMENDED initial value for the packet reordering threshold (kPacketThreshold) is 3",
+  "status": "verified"
+ },
+ {
+  "claim": "A PTO timer expiration does not by itself indicate packet loss; the sender must send an ack-eliciting probe packet instead.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9002.html",
+  "quote": "A PTO timer expiration event does not indicate packet loss",
+  "status": "verified"
+ },
+ {
+  "claim": "RFC 9001 states that new QUIC connections can usually be established and secured within a single round trip only when there is no packet loss.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9001.html",
+  "quote": "Absent packet loss, most new connections can be established and secured within a single round trip;",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC 0-RTT lets a client send application data before the handshake completes, by reusing parameters from a previous connection.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9001.html",
+  "quote": "The 0-RTT feature in QUIC allows a client to send application data before the handshake is complete.",
+  "status": "verified"
+ },
+ {
+  "claim": "Using 0-RTT with HTTP/3 creates exposure to replay attacks.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9114.html",
+  "quote": "The use of 0-RTT with HTTP/3 creates an exposure to replay attack.",
+  "status": "verified"
+ },
+ {
+  "claim": "QUIC connection migration uses connection identifiers to allow a connection to transfer to a new network path.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9000.html",
+  "quote": "Connection migration uses connection identifiers to allow connections to transfer to a new network path.",
+  "status": "verified"
+ },
+ {
+  "claim": "In this QUIC version only clients can migrate connections.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9000.html",
+  "quote": "Only clients are able to migrate in this version of QUIC.",
+  "status": "verified"
+ },
+ {
+  "claim": "After a migration, packets sent on the old path must not contribute to congestion control or RTT estimation for the new path.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9000.html",
+  "quote": "Packets sent on the old path MUST NOT contribute to congestion control or RTT estimation for the new path.",
+  "status": "verified"
+ },
+ {
+  "claim": "RFC 9000 requires endpoints to perform path validation on a detected address change, unless the address was already validated.",
+  "source": "https://www.rfc-editor.org/rfc/rfc9000.html",
+  "quote": "An endpoint MUST perform path validation",
+  "status": "verified"
+ }
+]
