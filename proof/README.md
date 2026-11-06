@@ -2,6 +2,8 @@
 
 Two tests, all data included. Both ran Quoteproof's quote checker exactly as it ships in the skill.
 
+A third comparison, against Claude's deep research on the same topic (cost, time, citation accuracy and coverage), is in [vs-deep-research/](vs-deep-research/README.md).
+
 ## 1. Real research run: SQLite WAL vs rollback journal
 
 Quoteproof researched *"SQLite WAL vs rollback journal for concurrent writes"* from 5 angles. The research agents (Claude Haiku) collected **78 claims from 14 source pages**. Then the checker fetched each page once and matched every quote.

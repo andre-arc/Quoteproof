@@ -1,0 +1,107 @@
+[
+ {
+  "claim": "readers do not block writers and a writer does not block readers,",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "readers do not block writers and a writer does not block readers"
+ },
+ {
+  "claim": "since there is only one WAL file, there can only be one writer at a time",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "since there is only one WAL file, there can only be one writer at a time"
+ },
+ {
+  "claim": "no subsequent operations on the same database through the next COMMIT will retur",
+  "source": "https://www.sqlite.org/rescode.html",
+  "quote": "no subsequent operations on the same database through the next COMMIT will return SQLITE_BUSY"
+ },
+ {
+  "claim": "produces the highest throughput by a wide margin",
+  "source": "https://par.nsf.gov/servlets/purl/10390276",
+  "quote": "produces the highest throughput by a wide margin"
+ },
+ {
+  "claim": "slightly less than half as fast",
+  "source": "https://par.nsf.gov/servlets/purl/10390276",
+  "quote": "slightly less than half as fast"
+ },
+ {
+  "claim": "perhaps 1% or 2% slower,",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "perhaps 1% or 2% slower"
+ },
+ {
+  "claim": "mostly similar",
+  "source": "https://par.nsf.gov/servlets/purl/10390276",
+  "quote": "mostly similar"
+ },
+ {
+  "claim": "WAL mode works as efficiently with large transactions as does rollback mode",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "WAL mode works as efficiently with large transactions as does rollback mode"
+ },
+ {
+  "claim": "a single transaction that commits right before a power loss might get rolled bac",
+  "source": "https://www.sqlite.org/pragma.html",
+  "quote": "a single transaction that commits right before a power loss might get rolled back upon reboot"
+ },
+ {
+  "claim": "the best balance between performance and safety for most applications running in",
+  "source": "https://www.sqlite.org/pragma.html",
+  "quote": "the best balance between performance and safety for most applications running in WAL mode"
+ },
+ {
+  "claim": "most consumer-grade mass storage devices lie about syncing",
+  "source": "https://www.sqlite.org/howtocorrupt.html",
+  "quote": "most consumer-grade mass storage devices lie about syncing"
+ },
+ {
+  "claim": "most COMMIT operations [are] very fast but an occasional COMMIT \u2026 much slower (fragment 1/2)",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "most COMMIT operations"
+ },
+ {
+  "claim": "most COMMIT operations [are] very fast but an occasional COMMIT \u2026 much slower (fragment 2/2)",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "very fast but an occasional COMMIT"
+ },
+ {
+  "claim": "will never block on a sync operation",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "will never block on a sync operation"
+ },
+ {
+  "claim": "there is always at least one active reader, then no checkpoints will be able to ",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "there is always at least one active reader, then no checkpoints will be able to complete and hence the WAL file will grow without bound"
+ },
+ {
+  "claim": "not an emergency,",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "not an emergency"
+ },
+ {
+  "claim": "all processes using a database must be on the same host computer; WAL does not w",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "all processes using a database must be on the same host computer; WAL does not work over a network filesystem"
+ },
+ {
+  "claim": "a VM has its own memory space",
+  "source": "https://sqlite.org/forum/forumpost/292a68c5e4?t=c",
+  "quote": "a VM has its own memory space"
+ },
+ {
+  "claim": "might not fail",
+  "source": "https://tangentsoft.com/sqlite/dir/walbanger?ci=trunk",
+  "quote": "might not fail"
+ },
+ {
+  "claim": "at the user's risk,",
+  "source": "https://www.sqlite.org/useovernet.html",
+  "quote": "at the user's risk"
+ },
+ {
+  "claim": "less appealing",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "less appealing"
+ }
+]

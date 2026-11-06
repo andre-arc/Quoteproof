@@ -28,8 +28,9 @@ Quoteproof is an agent skill that checks with code instead. After researching, i
 | :-- | :-- |
 | Real research run (78 claims, 14 pages) | 77 verified, **1 wrong-page citation caught and corrected** |
 | Stress test with 35 planted errors + 10 controls | **45/45** classified correctly |
+| Same topic vs Claude deep research | **~28% of the research tokens**, on a cheaper model. 0 quote errors in the report vs 1 in deep research's |
 
-Full data, method and limits: [proof/](proof/README.md).
+Deep research covered the topic more broadly; see the [comparison](proof/vs-deep-research/README.md) for what each found. Full data, method and limits: [proof/](proof/README.md).
 
 ## Compared with prompt-only research skills
 
