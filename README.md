@@ -44,7 +44,7 @@ Deep research covered the topic more broadly; see the [comparison](proof/vs-deep
 ## Limitations
 
 - Checks that a quote **exists** on its page, not that it **supports** the claim.
-- PDF sources need `pypdf` or the `pdftotext` command installed; without them, PDF quotes are reported as unchecked, never as verified.
+- PDF sources need `pdftotext` (poppler-utils, recommended) or `pypdf` installed; without them, PDF quotes are reported as unchecked, never as verified.
 - Needs Python 3.10+ for the checker; without it, the agent checks quotes itself.
 - Fetches the cited source URLs, so it needs network access.
 
