@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t">
+  <title id="t">Quoteproof</title>
+  <rect width="512" height="512" rx="112" fill="#142033"/>
+  <!-- quotation mark: dot + tail, tail leaves the dot at its rightmost point -->
+  <circle cx="180" cy="214" r="60" fill="#F3F5F9"/>
+  <path d="M240 214 C 240 300, 198 350, 126 374 L 116 348 C 160 330, 184 302, 186 273 Z" fill="#F3F5F9"/>
+  <!-- check: the proof -->
+  <path d="M278 262 L 328 312 L 412 196" fill="none" stroke="#3DDC97" stroke-width="50" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

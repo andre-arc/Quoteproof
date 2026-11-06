@@ -1,0 +1,470 @@
+[
+ {
+  "angle": "checkpointing",
+  "claim": "By default, SQLite runs an automatic checkpoint when the WAL file reaches 1000 pages.",
+  "source": "https://sqlite.org/wal.html",
+  "quote": "By default, SQLite does a checkpoint automatically when the WAL file reaches a threshold size of 1000 pages."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "PRAGMA wal_autocheckpoint sets the auto-checkpoint threshold; zero or negative disables auto-checkpointing.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "Setting the auto-checkpoint size to zero or a negative value turns auto-checkpointing off."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "All automatic checkpoints run in PASSIVE mode.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "All automatic checkpoints are PASSIVE."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "The default manual checkpoint style is PASSIVE, which does as much work as it can.",
+  "source": "https://sqlite.org/wal.html",
+  "quote": "The default checkpoint style is PASSIVE, which does as much work as it can"
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "FULL checkpoints block new writers while pending but do not block new readers.",
+  "source": "https://sqlite.org/c3ref/wal_checkpoint_v2.html",
+  "quote": "This mode blocks new database writers while it is pending, but new database readers are allowed to continue unimpeded."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "RESTART checkpoints wait until readers use only the database file, ensuring the next writer restarts the log from the beginning.",
+  "source": "https://sqlite.org/c3ref/wal_checkpoint_v2.html",
+  "quote": "This ensures that the next writer will restart the log file from the beginning."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "TRUNCATE checkpoints truncate the WAL file to zero bytes before a successful return.",
+  "source": "https://sqlite.org/c3ref/wal_checkpoint_v2.html",
+  "quote": "it also truncates the log file to zero bytes just prior to a successful return."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "A long-running read transaction can prevent checkpoints from completing, causing the WAL file to grow without bound.",
+  "source": "https://sqlite.org/wal.html",
+  "quote": "then no checkpoints will be able to complete and hence the WAL file will grow without bound."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "If another connection holds a read transaction open, the checkpoint cannot reset the WAL file.",
+  "source": "https://sqlite.org/wal.html",
+  "quote": "If another connection has a read transaction open, then the checkpoint cannot reset the WAL file"
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "A normal checkpoint does not truncate the WAL file unless journal_size_limit is set.",
+  "source": "https://sqlite.org/wal.html",
+  "quote": "The checkpoint does not normally truncate the WAL file (unless the journal_size_limit pragma is set)."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "Setting journal_size_limit to zero truncates rollback journals and WAL files to minimum size.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "To always truncate rollback journals and WAL files to their minimum size, set the journal_size_limit to zero."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "The default journal_size_limit is -1, meaning no limit.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "The default journal size limit is -1 (no limit)."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "BEGIN CONCURRENT lets multiple writers process write transactions simultaneously when the database is in wal or wal2 mode.",
+  "source": "https://sqlite.org/cgi/src/doc/begin-concurrent/doc/begin_concurrent.md",
+  "quote": "The BEGIN CONCURRENT enhancement allows multiple writers to process write transactions simultanously if the database is in \"wal\" or \"wal2\" mode"
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "In wal2 mode the system uses two WAL files instead of one.",
+  "source": "https://sqlite.org/cgi/src/doc/wal2/doc/wal2.md",
+  "quote": "In wal2 mode, the system uses two wal files instead of one."
+ },
+ {
+  "angle": "checkpointing",
+  "claim": "In wal2 mode the checkpointer must wait until writers have switched to the other WAL file before checkpointing.",
+  "source": "https://sqlite.org/cgi/src/doc/wal2/doc/wal2.md",
+  "quote": "In wal2 mode, the checkpointer has to wait until writers have switched to the \"other\" wal file before a checkpoint can take place."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "In WAL mode, readers do not block writers and a writer does not block readers.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "WAL provides more concurrency as readers do not block writers and a writer does not block readers."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "In WAL mode, only one writer can be active at a time because there is a single WAL file.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "since there is only one WAL file, there can only be one writer at a time."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "SQLite allows many simultaneous read transactions from separate connections but only one simultaneous write transaction.",
+  "source": "https://www.sqlite.org/lang_transaction.html",
+  "quote": "SQLite supports multiple simultaneous read transactions coming from separate database connections, possibly in separate threads or processes, but only one simultaneous write transaction."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "In rollback-journal mode, any number of connections can hold SHARED locks at once, allowing many simultaneous readers.",
+  "source": "https://www.sqlite.org/lockingv3.html",
+  "quote": "Any number of processes can hold SHARED locks at the same time, hence there can be many simultaneous readers."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "In rollback-journal mode, only one EXCLUSIVE lock is allowed on the file and no other lock kind can coexist with it.",
+  "source": "https://www.sqlite.org/lockingv3.html",
+  "quote": "Only one EXCLUSIVE lock is allowed on the file and no other locks of any kind are allowed to coexist with an EXCLUSIVE lock."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "In rollback-journal mode, a writer that cannot obtain a RESERVED lock fails immediately with SQLITE_BUSY.",
+  "source": "https://www.sqlite.org/lockingv3.html",
+  "quote": "In that case, the write attempt fails and returns SQLITE_BUSY."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "In rollback-journal mode, a pending writer blocks new SHARED locks while existing readers may finish.",
+  "source": "https://www.sqlite.org/lockingv3.html",
+  "quote": "No new SHARED locks are permitted against the database if a PENDING lock is active, though existing SHARED locks are allowed to continue."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "In rollback-journal mode, a reader that cannot obtain a SHARED lock fails immediately with SQLITE_BUSY.",
+  "source": "https://www.sqlite.org/lockingv3.html",
+  "quote": "If the SHARED lock cannot be obtained, fail immediately and return SQLITE_BUSY."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "In rollback-journal mode, no other process can access the database from the time the cache first spills to disk until commit.",
+  "source": "https://www.sqlite.org/lockingv3.html",
+  "quote": "no other processes are able to access the database from the time the memory cache first spills to disk until the transaction commits."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "BEGIN DEFERRED is the default; a later write in a read transaction either upgrades or returns SQLITE_BUSY.",
+  "source": "https://www.sqlite.org/lang_transaction.html",
+  "quote": "Subsequent write statements will upgrade the transaction to a write transaction if possible, or return SQLITE_BUSY."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "BEGIN IMMEDIATE starts a write transaction immediately and may fail with SQLITE_BUSY if another writer is active.",
+  "source": "https://www.sqlite.org/lang_transaction.html",
+  "quote": "The BEGIN IMMEDIATE might fail with SQLITE_BUSY if another write transaction is already active on another database connection."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "EXCLUSIVE and IMMEDIATE behave identically in WAL mode.",
+  "source": "https://www.sqlite.org/lang_transaction.html",
+  "quote": "EXCLUSIVE and IMMEDIATE are the same in WAL mode"
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "Upgrading a read transaction to write fails with SQLITE_BUSY if another connection has already modified or is modifying the database.",
+  "source": "https://www.sqlite.org/lang_transaction.html",
+  "quote": "upgrading to a write transaction is not possible and the write statement will fail with SQLITE_BUSY."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "sqlite3_busy_timeout sets a busy handler that sleeps and, after the timeout elapses, causes sqlite3_step() to return SQLITE_BUSY.",
+  "source": "https://www.sqlite.org/c3ref/busy_timeout.html",
+  "quote": "the handler returns 0 which causes sqlite3_step() to return SQLITE_BUSY."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "Each database connection can have only one busy handler at any given moment.",
+  "source": "https://www.sqlite.org/c3ref/busy_timeout.html",
+  "quote": "There can only be a single busy handler for a particular database connection at any given moment."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "In WAL mode, a checkpoint cannot reset the WAL while another connection holds a read transaction, so a continuously active reader lets the WAL grow without bound.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "no checkpoints will be able to complete and hence the WAL file will grow without bound."
+ },
+ {
+  "angle": "concurrency-model",
+  "claim": "WAL mode can still return SQLITE_BUSY in obscure cases such as exclusive locking mode, last-connection cleanup, or crash recovery.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "But there are some obscure cases where a query against a WAL-mode database can return SQLITE_BUSY"
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "synchronous=OFF: SQLite stops syncing once data is handed to the OS; an OS crash or power loss can corrupt the database.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "the database might become corrupted if the operating system crashes or the computer loses power before that data has been written to non-volatile storage."
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "Transactions are durable across application crashes regardless of the synchronous setting or journal mode.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "Transactions are durable across application crashes regardless of the synchronous setting or journal mode."
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "synchronous=NORMAL carries a very small but non-zero chance that a power failure at the wrong moment corrupts the database.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "There is a very small (though non-zero) chance that a power failure at just the wrong time could corrupt the database"
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "In WAL mode, synchronous=NORMAL never corrupts the database but does lose durability.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "WAL mode is always consistent with synchronous=NORMAL, but WAL mode does lose durability."
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "A transaction committed in WAL mode with synchronous=NORMAL may roll back after a power loss or system crash.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "A transaction committed in WAL mode with synchronous=NORMAL might roll back following a power loss or system crash."
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "With synchronous=NORMAL in WAL mode, the WAL is synced before each checkpoint and the database file is synced after each completed checkpoint.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "the WAL file is synchronized before each checkpoint and the database file is synchronized after each completed checkpoint,"
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "synchronous=FULL in WAL mode is ACID, including durable.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "FULL is atomic, consistent, isolated, and durable (ACID) in WAL mode."
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "In WAL mode with synchronous=FULL, the WAL is synced on every transaction commit; NORMAL omits this sync.",
+  "source": "https://sqlite.org/wal.html",
+  "quote": "Writers sync the WAL on every transaction commit if PRAGMA synchronous is set to FULL"
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "In rollback-journal mode, synchronous=FULL is not necessarily durable across a power loss.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "FULL is not necessarily durable across a power loss in rollback mode."
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "Without EXTRA, a transaction committed just before a power loss may be rolled back on reboot, though the database does not corrupt.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "it is possible that a single transaction that commits right before a power loss might get rolled back upon reboot."
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "synchronous=EXTRA is FULL plus syncing the directory containing the rollback journal (in DELETE mode).",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "EXTRA synchronous is like FULL with the addition that the directory containing a rollback journal is synced"
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "synchronous=EXTRA behaves no differently from FULL in WAL mode.",
+  "source": "https://sqlite.org/pragma.html",
+  "quote": "EXTRA is no different from FULL in WAL mode."
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "In rollback mode, the journal is flushed to nonvolatile storage before any database file changes are made.",
+  "source": "https://sqlite.org/atomiccommit.html",
+  "quote": "to make absolutely sure that all of the rollback journal is safely on nonvolatile storage"
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "A hot journal exists only when an earlier process was in the middle of committing a transaction.",
+  "source": "https://sqlite.org/atomiccommit.html",
+  "quote": "A hot journal only exists when an earlier process was in the middle of committing a transaction"
+ },
+ {
+  "angle": "durability-fsync",
+  "claim": "Checkpointing in WAL mode requires sync operations to avoid database corruption.",
+  "source": "https://sqlite.org/wal.html",
+  "quote": "Checkpointing does require sync operations in order to avoid the possibility of database corruption"
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "WAL mode does not work over a network filesystem because it requires processes to share memory.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "All processes using a database must be on the same host computer; WAL does not work over a network filesystem."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "The WAL-index shared memory is created by mmapping a file in the same directory as the database, which is the only way SQLite found to ensure processes share it.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "create the shared memory by mmapping a file in the same directory as the database itself."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "Opening a WAL database requires write privilege on the -shm file if it exists, or write access to the database directory if it does not.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "The opening process must have write privileges for \"-shm\" wal-index shared memory file associated with the database, if that file exists"
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "If the VFS lacks shared-memory methods, opening or converting a database to WAL mode fails.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "the attempt to open a database that is already in WAL mode, or the attempt to convert a database into WAL mode, will fail."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "Setting EXCLUSIVE locking mode before the first WAL access avoids shared-memory use entirely, so no wal-index shm is created.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "If EXCLUSIVE locking mode is set prior to the first WAL-mode database access, then SQLite never attempts to call any of the shared-memory methods"
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "SQLite versions before 3.22.0 could not read a read-only WAL-mode database.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "Older versions of SQLite could not read a WAL-mode database that was read-only."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "Before burning a database onto read-only media, the database should be switched to journal_mode=DELETE.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "it is good practice to convert the database to PRAGMA journal_mode=DELETE prior to burning an SQLite database image onto read-only media."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "With always-overlapping readers, checkpoints never complete and the WAL file grows without bound.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "then no checkpoints will be able to complete and hence the WAL file will grow without bound."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "The SQLITE_CHECKPOINT_RESTART and SQLITE_CHECKPOINT_TRUNCATE modes can block readers while the checkpoint runs.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "The disadvantage of using SQLITE_CHECKPOINT_RESTART and SQLITE_CHECKPOINT_TRUNCATE is that readers might block while the checkpoint is running."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "For transactions larger than about 100 MB, rollback journal modes will likely be faster than WAL.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "For transactions larger than about 100 megabytes, traditional rollback journal modes will likely be faster."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "For transactions over a gigabyte, WAL mode may fail with an I/O or disk-full error.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "For transactions in excess of a gigabyte, WAL mode may fail with an I/O or disk-full error."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "In WAL mode, a transaction spanning multiple ATTACHed databases is atomic per database but not atomic across the set.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "Transactions that involve changes against multiple ATTACHed databases are atomic for each individual database, but are not atomic across all databases as a set."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "In rollback mode, a transaction modifying multiple attached database files updates all of them atomically, using a super-journal.",
+  "source": "https://www.sqlite.org/atomiccommit.html",
+  "quote": "When multiple database files are modified within a single transaction, all files are updated atomically."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "SQLite's documentation warns that exclusive locks used for writes have misbehaved on some network filesystems and caused database corruption.",
+  "source": "https://www.sqlite.org/useovernet.html",
+  "quote": "SQLite relies on exclusive locks for write operations, and those have been known to operate incorrectly for some network filesystems."
+ },
+ {
+  "angle": "failure-modes",
+  "claim": "The SQLite library is not tested for across-a-network scenarios, so remote database use is at the user's risk.",
+  "source": "https://www.sqlite.org/useovernet.html",
+  "quote": "However, the SQLite library is not tested in across-a-network scenarios, nor is that reasonably possible."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "WAL mode is significantly faster than rollback journal in most scenarios.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "WAL is significantly faster in most scenarios."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "WAL write transactions write content once, whereas rollback-journal transactions write it twice.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "Write transactions are very fast since they only involve writing the content once (versus twice for rollback-journal transactions)"
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "WAL uses many fewer fsync() operations than the rollback journal approach.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "WAL uses many fewer fsync() operations and is thus less vulnerable to problems on systems where the fsync() system call is broken."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "In WAL mode with synchronous=FULL, an additional WAL sync occurs after every transaction commit.",
+  "source": "https://www.sqlite.org/pragma.html",
+  "quote": "With synchronous=FULL in WAL mode, an additional sync operation of the WAL file happens after each transaction commit."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "In WAL mode with synchronous=NORMAL, no sync operations occur during most transactions.",
+  "source": "https://www.sqlite.org/pragma.html",
+  "quote": "but no sync operations occur during most transactions."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "With synchronous=NORMAL in WAL mode, checkpoint is the only operation that issues a sync barrier.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "Note that with PRAGMA synchronous set to NORMAL, the checkpoint is the only operation to issue an I/O barrier or sync operation"
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "WAL checkpoints are slower than write transactions, so most commits are fast while checkpointing commits are much slower.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "This has the effect of causing most COMMIT operations to be very fast but an occasional COMMIT (those that trigger a checkpoint) to be much slower."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "WAL read performance degrades as the WAL file grows, because readers must scan the WAL.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "read performance deteriorates as the WAL file grows in size since each reader must check the WAL file"
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "WAL can be slightly slower (about 1-2%) than rollback journal in applications that mostly read and seldom write.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "WAL might be very slightly slower (perhaps 1% or 2% slower) than the traditional rollback-journal approach"
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "For transactions larger than about 100 MB, rollback journal modes will likely be faster than WAL, per the official docs.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "For transactions larger than about 100 megabytes, traditional rollback journal modes will likely be faster."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "Since SQLite 3.11.0, WAL mode handles large transactions as efficiently as rollback mode.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "Beginning with version 3.11.0 (2016-02-15), WAL mode works as efficiently with large transactions as does rollback mode."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "With synchronous=FULL in rollback mode, the VFS xSync method is used so content reaches disk before continuing.",
+  "source": "https://www.sqlite.org/pragma.html",
+  "quote": "the SQLite database engine will use the xSync method of the VFS to ensure that all content is safely written"
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "WAL mode with synchronous=NORMAL stays consistent but loses durability, so committed transactions may roll back after power loss.",
+  "source": "https://www.sqlite.org/pragma.html",
+  "quote": "WAL mode is always consistent with synchronous=NORMAL, but WAL mode does lose durability."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "The SQLite docs describe synchronous=NORMAL as providing the best balance of performance and safety for most WAL applications.",
+  "source": "https://www.sqlite.org/wal.html",
+  "quote": "The synchronous=NORMAL setting provides the best balance between performance and safety for most applications running in WAL mode."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "In a secondary-source benchmark (10,000 autocommitted inserts), throughput rose from about 279 to about 33,135 inserts/s moving from default DELETE+FULL to WAL+NORMAL.",
+  "source": "https://sesamedisk.com/sqlite-performance-tuning-high-throughput/",
+  "quote": "a single experiment that logged roughly 279 inserts per second jumps to about 33,135 inserts per second on the same drive."
+ },
+ {
+  "angle": "write-throughput",
+  "claim": "In the same secondary-source benchmark, WAL with synchronous=FULL reached only about 442 inserts/s.",
+  "source": "https://sesamedisk.com/sqlite-performance-tuning-high-throughput/",
+  "quote": "WAL with synchronous=FULL only reaches about 442 inserts per second, barely better than the baseline"
+ }
+]
