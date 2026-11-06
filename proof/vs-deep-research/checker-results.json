@@ -21,13 +21,13 @@
   "claim": "produces the highest throughput by a wide margin",
   "source": "https://par.nsf.gov/servlets/purl/10390276",
   "quote": "produces the highest throughput by a wide margin",
-  "status": "not_found"
+  "status": "verified"
  },
  {
   "claim": "slightly less than half as fast",
   "source": "https://par.nsf.gov/servlets/purl/10390276",
   "quote": "slightly less than half as fast",
-  "status": "not_found"
+  "status": "verified"
  },
  {
   "claim": "perhaps 1% or 2% slower,",
@@ -39,7 +39,7 @@
   "claim": "mostly similar",
   "source": "https://par.nsf.gov/servlets/purl/10390276",
   "quote": "mostly similar",
-  "status": "not_found"
+  "status": "verified"
  },
  {
   "claim": "WAL mode works as efficiently with large transactions as does rollback mode",

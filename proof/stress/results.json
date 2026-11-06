@@ -184,7 +184,7 @@
   "source": "https://www.sqlite.org/atomiccommit.html",
   "quote": "The opening process must have write privileges for \"-shm\" wal-index shared memory file associated with the database, if that file exists",
   "status": "misattributed",
-  "found_in": "https://www.sqlite.org/wal.html"
+  "found_in": "https://sqlite.org/wal.html"
  },
  {
   "claim": "BEGIN IMMEDIATE starts a write transaction immediately and may fail with SQLITE_BUSY if another writer is active.",
@@ -198,35 +198,35 @@
   "source": "https://www.sqlite.org/atomiccommit.html",
   "quote": "create the shared memory by mmapping a file in the same directory as the database itself.",
   "status": "misattributed",
-  "found_in": "https://www.sqlite.org/wal.html"
+  "found_in": "https://sqlite.org/wal.html"
  },
  {
   "claim": "WAL write transactions write content once, whereas rollback-journal transactions write it twice.",
   "source": "https://www.sqlite.org/atomiccommit.html",
   "quote": "Write transactions are very fast since they only involve writing the content once (versus twice for rollback-journal transactions)",
   "status": "misattributed",
-  "found_in": "https://www.sqlite.org/wal.html"
+  "found_in": "https://sqlite.org/wal.html"
  },
  {
   "claim": "All automatic checkpoints run in PASSIVE mode.",
   "source": "https://sqlite.org/atomiccommit.html",
   "quote": "All automatic checkpoints are PASSIVE.",
   "status": "misattributed",
-  "found_in": "https://sqlite.org/pragma.html"
+  "found_in": "https://www.sqlite.org/pragma.html"
  },
  {
   "claim": "In WAL mode, a transaction spanning multiple ATTACHed databases is atomic per database but not atomic across the set.",
   "source": "https://www.sqlite.org/atomiccommit.html",
   "quote": "Transactions that involve changes against multiple ATTACHed databases are atomic for each individual database, but are not atomic across all databases as a set.",
   "status": "misattributed",
-  "found_in": "https://www.sqlite.org/wal.html"
+  "found_in": "https://sqlite.org/wal.html"
  },
  {
   "claim": "If another connection holds a read transaction open, the checkpoint cannot reset the WAL file.",
   "source": "https://sqlite.org/atomiccommit.html",
   "quote": "If another connection has a read transaction open, then the checkpoint cannot reset the WAL file",
   "status": "misattributed",
-  "found_in": "https://www.sqlite.org/wal.html"
+  "found_in": "https://sqlite.org/wal.html"
  },
  {
   "claim": "In rollback-journal mode, any number of connections can hold SHARED locks at once, allowing many simultaneous readers.",
@@ -240,14 +240,14 @@
   "source": "https://www.sqlite.org/atomiccommit.html",
   "quote": "WAL is significantly faster in most scenarios.",
   "status": "misattributed",
-  "found_in": "https://www.sqlite.org/wal.html"
+  "found_in": "https://sqlite.org/wal.html"
  },
  {
   "claim": "Since SQLite 3.11.0, WAL mode handles large transactions as efficiently as rollback mode.",
   "source": "https://www.sqlite.org/atomiccommit.html",
   "quote": "Beginning with version 3.11.0 (2016-02-15), WAL mode works as efficiently with large transactions as does rollback mode.",
   "status": "misattributed",
-  "found_in": "https://www.sqlite.org/wal.html"
+  "found_in": "https://sqlite.org/wal.html"
  },
  {
   "claim": "WAL mode allows multiple simultaneous writers.",

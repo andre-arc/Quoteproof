@@ -17,21 +17,21 @@ Quoteproof's research phase used about 28% of deep research's tokens, on a cheap
 
 ## Citation accuracy
 
-Deep research quotes sources directly 21 times (after splitting quotes with "…" into fragments). We ran every quote through Quoteproof's checker, then checked each miss by hand.
+Deep research quotes sources directly 21 times (quotes shortened with "…" were split into their pieces). We ran every quote through Quoteproof's checker, then checked each miss by hand.
 
 | | Quoteproof report | Deep research report |
 | :-- | :-- | :-- |
 | Claims carrying a checkable verbatim quote | 78 of 78 (required) | 21 quotes; most claims are paraphrase + link |
-| Checker: verified | 77 | 17 |
-| Checker: not found | 0 | 4 |
+| Checker: verified | 77 | 20 |
+| Checker: not found | 0 | 1 |
 | Of those, real errors after manual check | — | **1** |
-| Of those, false alarms | — | 3 (quotes from a PDF; the checker reads HTML only) |
+| Of those, false alarms | — | 0 |
 | Wrong page cited | 1, caught and corrected before the report | 0 detected |
 | Errors that reached the final report | **0** | **1** |
 
 **The error that reached deep research's report:** it attributes *"a VM has its own memory space"* to the [SQLite forum thread](https://sqlite.org/forum/forumpost/292a68c5e4?t=c) as a direct quote. The thread never says it. The closest sentence is *"QEMU provides a private virtual memory space for its VM"*. The substance is right, but a paraphrase is presented as a quotation.
 
-**The three false alarms:** *"produces the highest throughput by a wide margin"*, *"slightly less than half as fast"* and *"mostly similar"* are all verbatim in the [VLDB 2022 paper](https://par.nsf.gov/servlets/purl/10390276) (PDF). The checker cannot read PDFs yet. That is a Quoteproof limitation, not a deep research error.
+**History: three false alarms, since fixed.** The first version of the checker read HTML only. It flagged *"produces the highest throughput by a wide margin"*, *"slightly less than half as fast"* and *"mostly similar"*, which are all verbatim in the [VLDB 2022 paper](https://par.nsf.gov/servlets/purl/10390276) (PDF). The current checker reads PDFs, rejoins words split across lines, and verifies all three. The table above reflects the current checker; it also still handles quotes shortened with "…" and requires their pieces in the original order.
 
 ## Coverage
 

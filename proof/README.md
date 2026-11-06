@@ -51,5 +51,5 @@ Source pages change over time, so a rerun months later may differ where sqlite.o
 ## What this does not show
 
 - **Support, not just presence.** The checker proves a quote exists on the page. Whether it supports the claim is still the model's judgment.
-- **Breadth.** One topic, 14 pages, all HTML documentation. PDFs are not checked yet.
+- **Breadth.** One topic, 14 pages, all HTML documentation. PDF checking was added later and is exercised in [vs-deep-research/](vs-deep-research/README.md), not here.
 - **Search quality.** These tests measure the checker, not how good the sources the agents find are.

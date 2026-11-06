@@ -16,7 +16,7 @@ Quoteproof is an agent skill that checks with code instead. After researching, i
 3. **Verify.** Drops contradictions and marketing, then runs the bundled checker on every quote:
    | Result | Meaning | Action |
    | :-- | :-- | :-- |
-   | `verified` | Quote is on the cited page | kept |
+   | `verified` | Quote is on the cited page (web page or PDF) | kept |
    | `misattributed` | Quote is real but on a different cited page | kept, source corrected |
    | `not_found` | Quote is on no fetched page | dropped |
    | `fetch_failed` | Page could not be loaded | kept only if confirmed manually |
@@ -44,7 +44,7 @@ Deep research covered the topic more broadly; see the [comparison](proof/vs-deep
 ## Limitations
 
 - Checks that a quote **exists** on its page, not that it **supports** the claim.
-- HTML pages only; PDF quote matching is not supported yet.
+- PDF sources need `pypdf` or the `pdftotext` command installed; without them, PDF quotes are reported as unchecked, never as verified.
 - Needs Python 3.10+ for the checker; without it, the agent checks quotes itself.
 - Fetches the cited source URLs, so it needs network access.
 
