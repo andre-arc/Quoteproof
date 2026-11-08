@@ -11,13 +11,13 @@ Quoteproof is an agent skill that checks with code instead. After researching, i
 
 ## Try it free
 
-**[Quoteproof Community](https://gitlab.com/andre-arc/quoteproof-community)** is MIT licensed: the full 5-angle research pipeline with word-for-word quote checking on web pages.
+**[Quoteproof Community](https://github.com/andre-arc/Quoteproof-Community)** is MIT licensed: the full 5-angle research pipeline with word-for-word quote checking on web pages.
 
 ```bash
-git clone https://gitlab.com/andre-arc/quoteproof-community.git ~/.claude/skills/quoteproof-community
+git clone https://github.com/andre-arc/Quoteproof-Community.git ~/.claude/skills/quoteproof-community
 ```
 
-Then ask your agent to research something. [Pro](https://www.agensi.io/skills/quoteproof) adds PDFs and research papers, exact-text quoting and wrong-page detection; see the [comparison](https://gitlab.com/andre-arc/quoteproof-community#community-vs-pro).
+Then ask your agent to research something. [Pro](https://www.agensi.io/skills/quoteproof) adds PDFs and research papers, exact-text quoting and wrong-page detection; see the [comparison](https://github.com/andre-arc/Quoteproof-Community#community-vs-pro).
 
 ## How it works
 
@@ -81,4 +81,4 @@ Tested with Claude Code; other agents that support `SKILL.md` skills and can run
 
 ---
 
-<sub>© 2026 andre-arc. Logo and brand assets: all rights reserved. Proof data in `proof/` may be reused with attribution. [Quoteproof Community](https://gitlab.com/andre-arc/quoteproof-community) is MIT licensed.</sub>
+<sub>© 2026 andre-arc. Logo and brand assets: all rights reserved. Proof data in `proof/` may be reused with attribution. [Quoteproof Community](https://github.com/andre-arc/Quoteproof-Community) is MIT licensed.</sub>
