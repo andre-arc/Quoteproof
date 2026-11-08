@@ -32,6 +32,8 @@ Tried it? **[Share a review](https://github.com/andre-arc/Quoteproof-Community/i
    | `misattributed` | Quote is real but on a different cited page | kept, source corrected |
    | `not_found` | Quote is on no fetched page | dropped |
    | `fetch_failed` | Page could not be loaded | kept only if confirmed manually |
+
+   With Pro, an angle whose quotes fail too often is redone on your agent's strongest model (at most 2 per run). Research itself runs on the agent's fast, low-cost model, whichever vendor it comes from.
 4. **Report.** A cited report: findings, recommendations, trade-offs and open questions, ending with an audit line of claims checked, verified, corrected and dropped.
 
 ## Use cases
