@@ -65,7 +65,9 @@ Deep research covered the topic more broadly; see the [comparison](proof/vs-deep
 
 ## Get it
 
-Available on [Agensi](https://www.agensi.io) *(listing link coming soon)*. Works with Claude Code and other agents that support `SKILL.md` skills.
+**[Get Quoteproof on Agensi →](https://www.agensi.io/skills/quoteproof)**
+
+Tested with Claude Code; other agents that support `SKILL.md` skills and can run shell commands should work (see Compatibility above).
 
 ---
 
