@@ -32,6 +32,33 @@ Then ask your agent to research something. [Pro](https://www.agensi.io/skills/qu
    | `fetch_failed` | Page could not be loaded | kept only if confirmed manually |
 4. **Report.** A cited report: findings, recommendations, trade-offs and open questions, ending with an audit line of claims checked, verified, corrected and dropped.
 
+## Use cases
+
+**Technical decisions from primary docs.** Choosing a database mode, a protocol or a library, where the answer lives in official documentation and a misremembered detail costs you later.
+> *"Research whether SQLite WAL mode is the right choice for concurrent writes in our app."*
+
+Tested on exactly this: 78 quotes from the SQLite docs, one cited to the wrong page and corrected. Works in Community and Pro.
+
+**Literature reviews and research-paper summaries.** Summarizing what papers actually found, where a quote that is *almost* right changes the meaning. Needs Pro, which reads PDFs.
+> *"What does the research say about HTTP/3 versus HTTP/2 on lossy mobile networks?"*
+
+In testing, Quoteproof caught two misquotes from research papers that the model had accepted, e.g. *"advantageous **for** users that move"* where the paper says *"advantageous **in case of** users that move."*
+
+**Vendor and product comparisons.** Separating what vendors claim from what their docs and independent sources say. Every claim in the report links to a quote that exists on the cited page.
+> *"Compare managed Postgres providers on backup guarantees and failover times."*
+
+**Standards and specifications.** Questions answered by RFCs, W3C specs or API references, where the exact wording is the point.
+> *"What does the QUIC RFC say about connection migration?"*
+
+**Auditing AI-written research.** Already have a report from another AI tool? Ask your agent to list its quotes with their source URLs as a claims file, then run the bundled checker on it. We did this to Claude's deep research and found a paraphrase presented as a direct quote ([details](proof/vs-deep-research/README.md)).
+
+### Not a good fit
+
+- **Sources behind a login or paywall**, or pages that need JavaScript to show their text: they can't be fetched, so their quotes can't be checked.
+- **Your own local files or pasted text:** sources must be public URLs.
+- **Judging whether a claim is true:** Quoteproof proves the quote is on the page, not that the page is right.
+- **Questions with no written sources**, such as opinions, predictions or brand-new events.
+
 ## Proof
 
 | Test | Result |
