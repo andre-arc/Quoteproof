@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" role="img" aria-labelledby="t d">
+<title id="t">How Quoteproof works</title>
+<desc id="d">Decompose into 5 angles, search for claim, URL and exact quote, check each quote with a script, report with an audit line. Each quote is verified (kept), misattributed (kept, source corrected), not_found (dropped) or fetch_failed (kept only if confirmed).</desc>
+<style>
+  svg { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7;
+        --accent:#2a78d6; --accent-wash:rgba(42,120,214,0.14); --gray:#c3c2b7; --on-gray:#0b0b0b;
+        --bad:#d03b3b; --bad-wash:rgba(208,59,59,0.12); --border:rgba(11,11,11,0.10); }
+  @media (prefers-color-scheme: dark) {
+    svg { --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+          --accent:#3987e5; --accent-wash:rgba(57,135,229,0.22); --gray:#5c5b56; --on-gray:#ffffff;
+          --bad:#e66767; --bad-wash:rgba(230,103,103,0.18); --border:rgba(255,255,255,0.10); }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
+  .t { font-size: 17px; font-weight: 600; }
+  .s { font-size: 13px; fill: var(--ink2); }
+  .l { font-size: 13px; }
+  .m { font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .v { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .in { font-size: 12px; font-weight: 600; fill: #ffffff; }
+  .ingray { font-size: 12px; font-weight: 600; fill: var(--on-gray); }
+  .hero { font-size: 44px; font-weight: 600; }
+  .q { font-size: 15px; }
+</style>
+<rect width="760" height="330" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+<text class="t" x="24" y="38">How Quoteproof works</text>
+<text class="s" x="24" y="60">Research runs on a fast model. The quote check is code, not the model checking itself.</text>
+<rect x="24" y="84" width="154" height="104" rx="10" fill="none" stroke="var(--axis)" stroke-width="1"/>
+<text class="m" x="38" y="108">1</text>
+<text class="v" x="54" y="108">Decompose</text>
+<text class="l" x="38" y="134">5 angles chosen</text>
+<text class="l" x="38" y="152">for your topic</text>
+<path d="M184 136.0 H204 M199 131.0 L204 136.0 L199 141.0" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="210" y="84" width="154" height="104" rx="10" fill="none" stroke="var(--axis)" stroke-width="1"/>
+<text class="m" x="224" y="108">2</text>
+<text class="v" x="240" y="108">Search</text>
+<text class="l" x="224" y="134">claim → URL →</text>
+<text class="l" x="224" y="152">exact quote</text>
+<path d="M370 136.0 H390 M385 131.0 L390 136.0 L385 141.0" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="396" y="84" width="154" height="104" rx="10" fill="var(--accent-wash)" stroke="var(--accent)" stroke-width="2"/>
+<text class="m" x="410" y="108">3</text>
+<text class="v" x="426" y="108">Check</text>
+<text class="l" x="410" y="134">a script fetches each</text>
+<text class="l" x="410" y="152">page, matches word</text>
+<text class="l" x="410" y="170">for word</text>
+<path d="M556 136.0 H576 M571 131.0 L576 136.0 L571 141.0" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="582" y="84" width="154" height="104" rx="10" fill="none" stroke="var(--axis)" stroke-width="1"/>
+<text class="m" x="596" y="108">4</text>
+<text class="v" x="612" y="108">Report</text>
+<text class="l" x="596" y="134">cited findings +</text>
+<text class="l" x="596" y="152">audit line</text>
+<path d="M473.0 188 V210" stroke="var(--accent)" stroke-width="1.5"/>
+<rect x="24" y="210" width="712" height="96" rx="10" fill="none" stroke="var(--border)"/>
+<text class="m" x="40" y="234">Every quote gets one result</text>
+<g transform="translate(40 250)"><circle cx="8" cy="8" r="8" fill="var(--accent)"/><path d="M4 8.5 L7 11.5 L12 5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="v" x="64" y="263" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace">verified</text>
+<text class="m" x="64" y="284">kept</text>
+<g transform="translate(216 250)"><circle cx="8" cy="8" r="8" fill="var(--accent)"/><path d="M4 8.5 L7 11.5 L12 5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="v" x="240" y="263" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace">misattributed</text>
+<text class="m" x="240" y="284">kept, source corrected</text>
+<g transform="translate(392 250)"><circle cx="8" cy="8" r="8" fill="var(--bad)"/><path d="M5 5 L11 11 M11 5 L5 11" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="v" x="416" y="263" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace">not_found</text>
+<text class="m" x="416" y="284">dropped</text>
+<g transform="translate(568 250)"><circle cx="8" cy="8" r="8" fill="var(--muted)"/><path d="M4 8 H12" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="v" x="592" y="263" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace">fetch_failed</text>
+<text class="m" x="592" y="284">kept only if confirmed</text>
+</svg>

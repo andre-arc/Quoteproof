@@ -23,6 +23,8 @@ Tried it? **[Share a review](https://github.com/andre-arc/Quoteproof-Community/i
 
 ## How it works
 
+<p align="center"><img src="assets/proof/workflow.svg" width="760" alt="Decompose into 5 angles, search for claim, URL and exact quote, a script checks each quote word for word, then a report with an audit line. Each quote is verified, misattributed (source corrected), not_found (dropped) or fetch_failed (kept only if confirmed)."></p>
+
 1. **Decompose.** Splits your topic into 5 angles chosen for that topic.
 2. **Search.** Researches the angles in parallel. Every claim is recorded as *claim → source URL → verbatim quote*.
 3. **Verify.** Drops contradictions and marketing, then runs the bundled checker on every quote:
@@ -68,6 +70,8 @@ In testing, Quoteproof caught two misquotes from research papers that the model 
 <p align="center"><img src="assets/proof/misquotes.svg" width="760" alt="Two misquotes caught: an agent wrote 'advantageous for users that move' where the paper says 'in case of', and dropped '(head-of-line)' from another quote. Both were dropped before the report."></p>
 
 <p align="center"><img src="assets/proof/stress.svg" width="760" alt="Stress test: 45 of 45 quotes classified correctly across controls, paraphrases, changed meaning, wrong page and fabricated quotes."></p>
+
+<p align="center"><img src="assets/proof/run.svg" width="760" alt="Real checker output from the SQLite run: 78 quotes, 77 verified, and one quote cited to wal.html that the checker found on pragma.html instead."></p>
 
 <p align="center"><img src="assets/proof/coverage.svg" width="760" alt="Of the same 83 quotes, Community checked 47 and Pro checked 82; the rest were PDFs or blocked sites."></p>
 

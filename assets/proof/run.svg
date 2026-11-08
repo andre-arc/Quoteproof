@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 345" width="760" height="345" role="img" aria-labelledby="t d">
+<title id="t">Real output: a wrong page, caught and corrected</title>
+<desc id="d">Checker output from the SQLite run: 78 quotes, 77 verified, one misattributed quote found on pragma.html instead of the cited wal.html.</desc>
+<style>
+  svg { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7;
+        --accent:#2a78d6; --accent-wash:rgba(42,120,214,0.14); --gray:#c3c2b7; --on-gray:#0b0b0b;
+        --bad:#d03b3b; --bad-wash:rgba(208,59,59,0.12); --border:rgba(11,11,11,0.10); }
+  @media (prefers-color-scheme: dark) {
+    svg { --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+          --accent:#3987e5; --accent-wash:rgba(57,135,229,0.22); --gray:#5c5b56; --on-gray:#ffffff;
+          --bad:#e66767; --bad-wash:rgba(230,103,103,0.18); --border:rgba(255,255,255,0.10); }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
+  .t { font-size: 17px; font-weight: 600; }
+  .s { font-size: 13px; fill: var(--ink2); }
+  .l { font-size: 13px; }
+  .m { font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .v { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .in { font-size: 12px; font-weight: 600; fill: #ffffff; }
+  .ingray { font-size: 12px; font-weight: 600; fill: var(--on-gray); }
+  .hero { font-size: 44px; font-weight: 600; }
+  .q { font-size: 15px; }
+</style>
+<rect width="760" height="345" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+<text class="t" x="24" y="38">Real output: a wrong page, caught and corrected</text>
+<text class="s" x="24" y="60">SQLite research run: 78 quotes checked, 77 verified, 1 cited to the wrong page.</text>
+<rect x="24" y="80" width="712" height="213" rx="8" fill="var(--grid)" fill-opacity="0.45" stroke="var(--border)"/>
+<text x="40" y="106" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;font-size:13px;fill:var(--ink2)" xml:space="preserve">$ python3 verify_quotes.py claims.json</text>
+<text x="40" y="127" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;font-size:13px;fill:var(--muted)" xml:space="preserve">…</text>
+<text x="40" y="148" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;font-size:13px;" xml:space="preserve">{</text>
+<text x="40" y="169" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;font-size:13px;" xml:space="preserve">  "quote": "The synchronous=NORMAL setting provides the best balance between</text>
+<text x="40" y="190" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;font-size:13px;" xml:space="preserve">            performance and safety for most applications running in WAL mode.",</text>
+<text x="40" y="211" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;font-size:13px;" xml:space="preserve">  "source": "https://www.sqlite.org/wal.html",</text>
+<text x="40" y="232" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;font-size:13px;fill:var(--accent);font-weight:700" xml:space="preserve">  "status": "misattributed",</text>
+<text x="40" y="253" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;font-size:13px;fill:var(--accent);font-weight:700" xml:space="preserve">  "found_in": "https://www.sqlite.org/pragma.html"</text>
+<text x="40" y="274" style="font-family:ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;font-size:13px;" xml:space="preserve">}</text>
+<text class="m" x="24" y="327">The quote is real, but on pragma.html, not wal.html. The report cites pragma.html. Data: proof/sqlite-wal/results.json</text>
+</svg>
