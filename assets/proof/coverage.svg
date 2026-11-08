@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" role="img" aria-labelledby="t d">
+<title id="t">Quotes each edition could check</title>
+<desc id="d">Of 83 quotes, Community checked 47 and could not read 36; Pro checked 82 and could not read 1.</desc>
+<style>
+  svg { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7;
+        --accent:#2a78d6; --accent-wash:rgba(42,120,214,0.14); --gray:#c3c2b7; --on-gray:#0b0b0b;
+        --bad:#d03b3b; --bad-wash:rgba(208,59,59,0.12); --border:rgba(11,11,11,0.10); }
+  @media (prefers-color-scheme: dark) {
+    svg { --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+          --accent:#3987e5; --accent-wash:rgba(57,135,229,0.22); --gray:#5c5b56; --on-gray:#ffffff;
+          --bad:#e66767; --bad-wash:rgba(230,103,103,0.18); --border:rgba(255,255,255,0.10); }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
+  .t { font-size: 17px; font-weight: 600; }
+  .s { font-size: 13px; fill: var(--ink2); }
+  .l { font-size: 13px; }
+  .m { font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .v { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .in { font-size: 12px; font-weight: 600; fill: #ffffff; }
+  .ingray { font-size: 12px; font-weight: 600; fill: var(--on-gray); }
+  .hero { font-size: 44px; font-weight: 600; }
+  .q { font-size: 15px; }
+</style>
+<rect width="760" height="250" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+<text class="t" x="24" y="38">Quotes each edition could check</text>
+<text class="s" x="24" y="60">The same 83 quotes from the HTTP/3 research run (35 from research PDFs)</text>
+<rect x="24" y="78" width="12" height="12" rx="3" fill="var(--accent)"/><text class="l" x="42" y="89">Checked word for word</text>
+<rect x="210" y="78" width="12" height="12" rx="3" fill="var(--gray)"/><text class="l" x="228" y="89">Couldn't be read (PDFs, blocked sites)</text>
+<line x1="150.0" y1="110" x2="150.0" y2="196" stroke="var(--grid)"/>
+<text class="m" x="150.0" y="214" text-anchor="middle">0</text>
+<line x1="263.3" y1="110" x2="263.3" y2="196" stroke="var(--grid)"/>
+<text class="m" x="263.3" y="214" text-anchor="middle">20</text>
+<line x1="376.5" y1="110" x2="376.5" y2="196" stroke="var(--grid)"/>
+<text class="m" x="376.5" y="214" text-anchor="middle">40</text>
+<line x1="489.8" y1="110" x2="489.8" y2="196" stroke="var(--grid)"/>
+<text class="m" x="489.8" y="214" text-anchor="middle">60</text>
+<line x1="603.0" y1="110" x2="603.0" y2="196" stroke="var(--grid)"/>
+<text class="m" x="603.0" y="214" text-anchor="middle">80</text>
+<line x1="150" y1="108" x2="150" y2="198" stroke="var(--axis)"/>
+<text class="l" x="138" y="140" text-anchor="end">Community</text>
+<path d="M150 124 H415.144578313253 Q415.144578313253 124 415.144578313253 124 V148 Q415.144578313253 148 415.144578313253 148 H150 Z" fill="var(--accent)"/>
+<path d="M417.144578313253 124 H616.0 Q620.0 124 620.0 128 V144 Q620.0 148 616.0 148 H417.144578313253 Z" fill="var(--gray)"/>
+<text class="in" x="158" y="140">47 checked</text>
+<text class="ingray" x="425.144578313253" y="140">36 unreadable</text>
+<text class="l" x="138" y="180" text-anchor="end">Pro</text>
+<path d="M150 164 H613.3373493975904 Q613.3373493975904 164 613.3373493975904 164 V188 Q613.3373493975904 188 613.3373493975904 188 H150 Z" fill="var(--accent)"/>
+<path d="M615.3373493975904 164 H617.6686746987951 Q620.0 164 620.0 166.33132530120483 V185.66867469879517 Q620.0 188 617.6686746987951 188 H615.3373493975904 Z" fill="var(--gray)"/>
+<text class="in" x="158" y="180">82 checked</text>
+<text class="v" x="628.0" y="180">1 unreadable</text>
+<text class="m" x="620" y="236" text-anchor="end">quotes</text>
+</svg>

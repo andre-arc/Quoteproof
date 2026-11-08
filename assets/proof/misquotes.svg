@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 318" width="760" height="318" role="img" aria-labelledby="t d">
+<title id="t">Two misquotes caught before the report</title>
+<desc id="d">An agent quoted 'advantageous for users that move' where the paper says 'in case of'; another quote dropped '(head-of-line)'. Both were not found on the page and dropped.</desc>
+<style>
+  svg { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7;
+        --accent:#2a78d6; --accent-wash:rgba(42,120,214,0.14); --gray:#c3c2b7; --on-gray:#0b0b0b;
+        --bad:#d03b3b; --bad-wash:rgba(208,59,59,0.12); --border:rgba(11,11,11,0.10); }
+  @media (prefers-color-scheme: dark) {
+    svg { --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+          --accent:#3987e5; --accent-wash:rgba(57,135,229,0.22); --gray:#5c5b56; --on-gray:#ffffff;
+          --bad:#e66767; --bad-wash:rgba(230,103,103,0.18); --border:rgba(255,255,255,0.10); }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
+  .t { font-size: 17px; font-weight: 600; }
+  .s { font-size: 13px; fill: var(--ink2); }
+  .l { font-size: 13px; }
+  .m { font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .v { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .in { font-size: 12px; font-weight: 600; fill: #ffffff; }
+  .ingray { font-size: 12px; font-weight: 600; fill: var(--on-gray); }
+  .hero { font-size: 44px; font-weight: 600; }
+  .q { font-size: 15px; }
+</style>
+<rect width="760" height="318" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+<text class="t" x="24" y="38">Two misquotes caught before the report</text>
+<text class="s" x="24" y="60">Close enough that a reader, or the model checking its own notes, accepts them. The checker didn't.</text>
+<text class="m" x="24" y="98">IMDEA / MONROE paper, 2021</text>
+<text class="m" x="24" y="124">Paper</text>
+<text class="q" x="124" y="124">“<tspan>QUIC-based operations are advantageous </tspan><tspan font-weight="700" text-decoration="underline" style="fill:var(--accent)">in case of</tspan><tspan> users that move</tspan>”</text>
+<text class="m" x="24" y="152">Agent quoted</text>
+<text class="q" x="124" y="152">“<tspan>QUIC-based operations are advantageous </tspan><tspan font-weight="700" text-decoration="underline" style="fill:var(--bad)">for</tspan><tspan> users that move</tspan>”</text>
+<g transform="translate(124 164)"><rect width="172" height="22" rx="11" fill="var(--bad-wash)"/><path d="M11 7 L17 13 M17 7 L11 13" stroke="var(--bad)" stroke-width="2" stroke-linecap="round" transform="translate(0 1)"/><text class="v" x="26" y="15.5">not_found · dropped</text></g>
+<text class="m" x="24" y="214">Yu &amp; Benson, WWW 2021</text>
+<text class="m" x="24" y="240">Paper</text>
+<text class="q" x="124" y="240">“<tspan>QUIC’s removal of HOL </tspan><tspan font-weight="700" text-decoration="underline" style="fill:var(--accent)">(head-of-line)</tspan><tspan> blocking has little impact…</tspan>”</text>
+<text class="m" x="24" y="268">Agent quoted</text>
+<text class="q" x="124" y="268">“<tspan>QUIC’s removal of HOL </tspan><tspan font-weight="700" text-decoration="underline" style="fill:var(--bad)">[missing]</tspan><tspan> blocking has little impact…</tspan>”</text>
+<g transform="translate(124 280)"><rect width="172" height="22" rx="11" fill="var(--bad-wash)"/><path d="M11 7 L17 13 M17 7 L11 13" stroke="var(--bad)" stroke-width="2" stroke-linecap="round" transform="translate(0 1)"/><text class="v" x="26" y="15.5">not_found · dropped</text></g>
+</svg>

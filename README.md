@@ -61,6 +61,14 @@ In testing, Quoteproof caught two misquotes from research papers that the model 
 
 ## Proof
 
+<p align="center"><img src="assets/proof/misquotes.svg" width="760" alt="Two misquotes caught: an agent wrote 'advantageous for users that move' where the paper says 'in case of', and dropped '(head-of-line)' from another quote. Both were dropped before the report."></p>
+
+<p align="center"><img src="assets/proof/stress.svg" width="760" alt="Stress test: 45 of 45 quotes classified correctly across controls, paraphrases, changed meaning, wrong page and fabricated quotes."></p>
+
+<p align="center"><img src="assets/proof/coverage.svg" width="760" alt="Of the same 83 quotes, Community checked 47 and Pro checked 82; the rest were PDFs or blocked sites."></p>
+
+<p align="center"><img src="assets/proof/tokens.svg" width="760" alt="Research tokens on the same topic: Quoteproof 78.5K on Haiku, Claude deep research 278.8K on the main model."></p>
+
 | Test | Result |
 | :-- | :-- |
 | Real research run (78 claims, 14 pages) | 77 verified, **1 wrong-page citation caught and corrected** |

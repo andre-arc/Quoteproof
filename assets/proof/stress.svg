@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" role="img" aria-labelledby="t d">
+<title id="t">Stress test: 45 of 45 correct</title>
+<desc id="d">Controls 10/10, paraphrased 10/10, meaning changed 10/10, wrong page cited 10/10, fabricated 5/5.</desc>
+<style>
+  svg { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7;
+        --accent:#2a78d6; --accent-wash:rgba(42,120,214,0.14); --gray:#c3c2b7; --on-gray:#0b0b0b;
+        --bad:#d03b3b; --bad-wash:rgba(208,59,59,0.12); --border:rgba(11,11,11,0.10); }
+  @media (prefers-color-scheme: dark) {
+    svg { --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+          --accent:#3987e5; --accent-wash:rgba(57,135,229,0.22); --gray:#5c5b56; --on-gray:#ffffff;
+          --bad:#e66767; --bad-wash:rgba(230,103,103,0.18); --border:rgba(255,255,255,0.10); }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
+  .t { font-size: 17px; font-weight: 600; }
+  .s { font-size: 13px; fill: var(--ink2); }
+  .l { font-size: 13px; }
+  .m { font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .v { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .in { font-size: 12px; font-weight: 600; fill: #ffffff; }
+  .ingray { font-size: 12px; font-weight: 600; fill: var(--on-gray); }
+  .hero { font-size: 44px; font-weight: 600; }
+  .q { font-size: 15px; }
+</style>
+<rect width="760" height="330" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+<text class="hero" x="24" y="66">45/45</text>
+<text class="t" x="168" y="46">Stress test: every planted error caught</text>
+<text class="s" x="168" y="68">35 quotes damaged on purpose, 10 left intact. Each square is one quote, classified correctly.</text>
+<text class="l" x="196" y="115" text-anchor="end">Untouched (control)</text>
+<g transform="translate(210 100)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(238 100)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(266 100)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(294 100)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(322 100)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(350 100)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(378 100)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(406 100)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(434 100)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(462 100)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="v" x="498" y="115">10/10</text>
+<text class="l" x="196" y="157" text-anchor="end">Paraphrased</text>
+<g transform="translate(210 142)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(238 142)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(266 142)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(294 142)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(322 142)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(350 142)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(378 142)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(406 142)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(434 142)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(462 142)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="v" x="498" y="157">10/10</text>
+<text class="l" x="196" y="199" text-anchor="end">Meaning changed</text>
+<g transform="translate(210 184)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(238 184)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(266 184)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(294 184)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(322 184)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(350 184)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(378 184)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(406 184)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(434 184)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(462 184)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="v" x="498" y="199">10/10</text>
+<text class="l" x="196" y="241" text-anchor="end">Wrong page cited</text>
+<g transform="translate(210 226)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(238 226)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(266 226)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(294 226)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(322 226)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(350 226)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(378 226)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(406 226)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(434 226)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(462 226)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="v" x="498" y="241">10/10</text>
+<text class="l" x="196" y="283" text-anchor="end">Fabricated quote</text>
+<g transform="translate(210 268)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(238 268)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(266 268)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(294 268)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(322 268)"><rect width="22" height="22" rx="4" fill="var(--accent)"/><path d="M5.5 11.5 L9.5 15.5 L16.5 7.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="v" x="498" y="283">5/5</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 238" width="760" height="238" role="img" aria-labelledby="t d">
+<title id="t">Research tokens, same topic</title>
+<desc id="d">Quoteproof's research phase used 78,517 tokens on Haiku; Claude deep research used 278,826 on the main model.</desc>
+<style>
+  svg { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7;
+        --accent:#2a78d6; --accent-wash:rgba(42,120,214,0.14); --gray:#c3c2b7; --on-gray:#0b0b0b;
+        --bad:#d03b3b; --bad-wash:rgba(208,59,59,0.12); --border:rgba(11,11,11,0.10); }
+  @media (prefers-color-scheme: dark) {
+    svg { --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+          --accent:#3987e5; --accent-wash:rgba(57,135,229,0.22); --gray:#5c5b56; --on-gray:#ffffff;
+          --bad:#e66767; --bad-wash:rgba(230,103,103,0.18); --border:rgba(255,255,255,0.10); }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
+  .t { font-size: 17px; font-weight: 600; }
+  .s { font-size: 13px; fill: var(--ink2); }
+  .l { font-size: 13px; }
+  .m { font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .v { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .in { font-size: 12px; font-weight: 600; fill: #ffffff; }
+  .ingray { font-size: 12px; font-weight: 600; fill: var(--on-gray); }
+  .hero { font-size: 44px; font-weight: 600; }
+  .q { font-size: 15px; }
+</style>
+<rect width="760" height="238" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+<text class="t" x="24" y="38">Research tokens, same topic</text>
+<text class="s" x="24" y="60">"SQLite WAL vs rollback journal for concurrent writes" — research phase only</text>
+<line x1="270.0" y1="80" x2="270.0" y2="170" stroke="var(--grid)"/>
+<text class="m" x="270.0" y="188" text-anchor="middle">0</text>
+<line x1="403.3" y1="80" x2="403.3" y2="170" stroke="var(--grid)"/>
+<text class="m" x="403.3" y="188" text-anchor="middle">100K</text>
+<line x1="536.7" y1="80" x2="536.7" y2="170" stroke="var(--grid)"/>
+<text class="m" x="536.7" y="188" text-anchor="middle">200K</text>
+<line x1="670.0" y1="80" x2="670.0" y2="170" stroke="var(--grid)"/>
+<text class="m" x="670.0" y="188" text-anchor="middle">300K</text>
+<line x1="270" y1="78" x2="270" y2="172" stroke="var(--axis)"/>
+<text class="l" x="258" y="102" text-anchor="end" font-weight="600">Quoteproof</text>
+<text class="m" x="258" y="117" text-anchor="end">5 searchers on Haiku</text>
+<path d="M270 92 H370.6893333333333 Q374.6893333333333 92 374.6893333333333 96 V112 Q374.6893333333333 116 370.6893333333333 116 H270 Z" fill="var(--accent)"/>
+<text class="v" x="382.6893333333333" y="109">78.5K</text>
+<text class="l" x="258" y="144" text-anchor="end" font-weight="600">Claude deep research</text>
+<text class="m" x="258" y="159" text-anchor="end">4 researchers on the main model</text>
+<path d="M270 134 H637.768 Q641.768 134 641.768 138 V154 Q641.768 158 637.768 158 H270 Z" fill="var(--gray)"/>
+<text class="v" x="649.768" y="151">278.8K</text>
+<text class="s" x="24" y="216">Quoteproof used about 28% of the tokens, on a cheaper model. Report-writing tokens are not included.</text>
+</svg>
