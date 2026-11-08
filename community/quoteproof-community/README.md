@@ -40,7 +40,7 @@ python3 scripts/verify_quotes.py claims.json   # [{"claim", "source", "quote"}, 
 | Quotes copied from the page's exact text, not a fetch-tool summary | — | ✓ |
 | Detects quotes cited to the wrong page, and fixes the source | — | ✓ |
 | Quotes shortened with "…" | — | ✓ |
-| Handles PDF footnote markers, line-split words, ligatures | — | ✓ |
+| Handles PDF footnote markers and words split across lines | — | ✓ |
 
 ### Same research data, both editions
 
