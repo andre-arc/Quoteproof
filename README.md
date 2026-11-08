@@ -9,6 +9,10 @@ AI research reports cite sources with confidence. The quotes are often paraphras
 
 Quoteproof is an agent skill that checks with code instead. After researching, it fetches every cited page and matches each quote word for word.
 
+## Try it free
+
+**[Quoteproof Community](community/quoteproof-community/)** is MIT licensed: the full 5-angle research pipeline with word-for-word quote checking on web pages. Copy the folder into `~/.claude/skills/` and ask your agent to research something. [Pro](https://www.agensi.io/skills/quoteproof) adds PDFs and research papers, exact-text quoting and wrong-page detection; see the [comparison](community/quoteproof-community/README.md#community-vs-pro).
+
 ## How it works
 
 1. **Decompose.** Splits your topic into 5 angles chosen for that topic.
@@ -71,4 +75,4 @@ Tested with Claude Code; other agents that support `SKILL.md` skills and can run
 
 ---
 
-<sub>© 2026 andre-arc. Logo and brand assets: all rights reserved. Proof data in `proof/` may be reused with attribution.</sub>
+<sub>© 2026 andre-arc. Logo and brand assets: all rights reserved. Proof data in `proof/` may be reused with attribution. Quoteproof Community (`community/`) is MIT licensed.</sub>
