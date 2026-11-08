@@ -99,6 +99,7 @@ Deep research covered the topic more broadly; see the [comparison](proof/vs-deep
 - PDF sources need `pdftotext` (poppler-utils, recommended) or `pypdf` installed; without them, PDF quotes are reported as unchecked, never as verified.
 - Needs Python 3.9+ for the checker; without it, the agent checks quotes itself.
 - Fetches the cited source URLs, so it needs network access.
+- Sources must be public web pages or PDFs. It can't use your local files, pasted text or the conversation itself as sources, and it can't check quotes from them.
 
 ## Get it
 
