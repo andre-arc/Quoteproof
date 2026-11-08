@@ -1,7 +1,8 @@
 """Build the workflow diagram, the real-run card and the GitHub social preview cards.
 
 Run from the repo root:  python3 proof/charts/make_cards.py
-Writes assets/proof/{workflow,run}.svg (theme-aware) and assets/social/*.png (needs google-chrome).
+Writes assets/proof/{workflow,run}.svg (theme-aware), light/dark PNGs of every proof chart,
+and assets/social/*.png (needs google-chrome).
 """
 import json, pathlib, subprocess, sys, tempfile
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
@@ -119,9 +120,11 @@ def png(svg_text, path, w, h, scale=1, dark=False):
 
 if __name__ == "__main__":
     SOCIAL.mkdir(parents=True, exist_ok=True)
-    for name, fn in [("workflow", workflow), ("run", run)]:
-        s = fn()
-        (OUT / f"{name}.svg").write_text(s)
+    gen = {"workflow": workflow, "run": run}
+    for name in ["workflow", "run", "misquotes", "stress", "coverage", "tokens"]:  # last 4 come from make_charts.py
+        if name in gen:
+            (OUT / f"{name}.svg").write_text(gen[name]())
+        s = (OUT / f"{name}.svg").read_text()
         h = int(s.split('height="')[1].split('"')[0])
         for dark in (False, True):
             png(s, OUT / f"{name}-{'dark' if dark else 'light'}.png", 760, h, scale=2, dark=dark)
