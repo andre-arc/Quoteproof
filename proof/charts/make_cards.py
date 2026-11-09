@@ -158,6 +158,13 @@ if __name__ == "__main__":
         png(s, SOCIAL / f"{name}.png", 1280, 640)
         print("wrote", SOCIAL / f"{name}.png")
     # dev.to cover 1000x420; Medium/LinkedIn preview 1200x627 (same design at 1.91:1), both at 2x
-    for name, h in [("cover-devto", 420), ("cover-wide", 523)]:
-        png(cover(h), SOCIAL / f"{name}.png", 1000, h, scale=2)
+    # dev.to crops its cover to 1.91:1 for link previews, keeping the middle ~804px of 1000:
+    # put the 1.91:1 design inside that middle band so the article cover and the preview both show everything.
+    wide = cover(523)
+    devto = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420">'
+             '<rect width="1000" height="420" fill="#142033"/>'
+             + wide.replace('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 523" width="1000" height="523">',
+                            '<svg x="98" y="0" width="804" height="420" viewBox="0 0 1000 523">') + '</svg>')
+    for name, s, h in [("cover-devto", devto, 420), ("cover-wide", wide, 523)]:
+        png(s, SOCIAL / f"{name}.png", 1000, h, scale=2)
         print("wrote", SOCIAL / f"{name}.png")
