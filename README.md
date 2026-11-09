@@ -17,7 +17,7 @@ Quoteproof is an agent skill that checks with code instead. After researching, i
 git clone https://github.com/andre-arc/Quoteproof-Community.git ~/.claude/skills/quoteproof-community
 ```
 
-Then ask your agent to research something. [Pro](https://www.agensi.io/skills/quoteproof) adds PDFs and research papers, exact-text quoting and wrong-page detection; see the [comparison](https://github.com/andre-arc/Quoteproof-Community#community-vs-pro).
+Then ask your agent to research something. [Pro](https://www.agensi.io/r/ANDREARC?to=/skills/quoteproof&utm_source=github-core) adds PDFs and research papers, exact-text quoting and wrong-page detection; see the [comparison](https://github.com/andre-arc/Quoteproof-Community#community-vs-pro).
 
 Tried it? **[Share a review](https://github.com/andre-arc/Quoteproof-Community/issues/new?template=review.yml)**: what you researched, the audit line, and what it caught or missed.
 
@@ -119,7 +119,7 @@ Deep research covered the topic more broadly; see the [comparison](proof/vs-deep
 
 ## Get it
 
-**[Get Quoteproof on Agensi →](https://www.agensi.io/skills/quoteproof)**
+**[Get Quoteproof on Agensi →](https://www.agensi.io/r/ANDREARC?to=/skills/quoteproof&utm_source=github-core)**
 
 Tested with Claude Code; other agents that support `SKILL.md` skills and can run shell commands should work (see Compatibility above).
 
