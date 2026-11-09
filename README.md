@@ -123,6 +123,8 @@ Deep research covered the topic more broadly; see the [comparison](proof/vs-deep
 
 Tested with Claude Code; other agents that support `SKILL.md` skills and can run shell commands should work (see Compatibility above).
 
+What's changed: [CHANGELOG](CHANGELOG.md).
+
 ---
 
 <sub>© 2026 andre-arc. Logo and brand assets: all rights reserved. Proof data in `proof/` may be reused with attribution. [Quoteproof Community](https://github.com/andre-arc/Quoteproof-Community) is MIT licensed.</sub>
