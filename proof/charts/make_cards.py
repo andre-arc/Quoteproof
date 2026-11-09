@@ -107,6 +107,25 @@ def social(title, tagline, chips, foot):
             f'<style>text{{font-family:{FONT}}}</style>{"".join(b)}</svg>')
 
 
+# 4. Article covers. The misquote from run 1 (proof/http3-quic/README.md). Laid out 1000 wide; height sets the ratio.
+def cover(h):
+    y = (h - 268) / 2
+    b = [f'<rect width="1000" height="{h}" fill="#142033"/>', MARK.format(x=40, y=y - 12, s=0.11),
+         f'<text x="100" y="{y + 26}" style="font-size:22px;font-weight:600;fill:#8ea0b8">Quoteproof</text>',
+         f'<text x="56" y="{y + 108}" style="font-size:54px;font-weight:700;fill:#ffffff">The quote is almost right.</text>']
+    rows = [("Paper", "in case of", "#2ecc8a"), ("AI quoted", "for", "#ff7a7a")]
+    for i, (lab, word, col) in enumerate(rows):
+        yy = y + 186 + i * 56
+        b.append(f'<text x="56" y="{yy}" style="font-size:20px;fill:#8ea0b8">{lab}</text>')
+        b.append(f'<text x="180" y="{yy}" style="font-size:28px;fill:#e6ecf4">“advantageous '
+                 f'<tspan style="fill:{col};font-weight:700;text-decoration:underline">{word}</tspan> users that move”</text>')
+    b.append(f'<g transform="translate(678 {y + 222})"><rect width="276" height="40" rx="20" fill="#ff7a7a" fill-opacity="0.16"/>'
+             f'<path d="M20 14 L32 26 M32 14 L20 26" stroke="#ff7a7a" stroke-width="3" stroke-linecap="round"/>'
+             f'<text x="46" y="27" style="font-size:19px;font-weight:600;fill:#ffd2d2">caught: not on the page</text></g>')
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 {h}" width="1000" height="{h}">'
+            f'<style>text{{font-family:{FONT}}}</style>{"".join(b)}</svg>')
+
+
 def png(svg_text, path, w, h, scale=1, dark=False):
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as f:
         f.write(f'<html><head><meta name="color-scheme" content="{"dark" if dark else "light"}"></head>'
@@ -137,4 +156,8 @@ if __name__ == "__main__":
                                  "Claude Code skill")}
     for name, s in cards.items():
         png(s, SOCIAL / f"{name}.png", 1280, 640)
+        print("wrote", SOCIAL / f"{name}.png")
+    # dev.to cover 1000x420; Medium/LinkedIn preview 1200x627 (same design at 1.91:1), both at 2x
+    for name, h in [("cover-devto", 420), ("cover-wide", 523)]:
+        png(cover(h), SOCIAL / f"{name}.png", 1000, h, scale=2)
         print("wrote", SOCIAL / f"{name}.png")
